@@ -81,7 +81,15 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-black/5 text-center text-sm text-text-tertiary">
-          {t("copyright")}
+          <p>{t("copyright")}</p>
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block hover:text-primary-500 transition-colors"
+          >
+            {t("icp")}
+          </a>
         </div>
       </Container>
     </footer>
