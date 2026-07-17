@@ -28,7 +28,7 @@
 官网整体结构应围绕以下四个核心目标展开：
 
 - **建立认知**：讲清则知的定位与能力体系。
-- **建立信任**：用案例、客户故事、方法和治理表达建立可信度。
+- **建立信任**：用案例、方法和治理表达建立可信度。
 - **降低理解门槛**：通过简洁页面结构与可体验案例，让访客快速理解 Agent 的价值。
 - **承接转化**：为意向客户提供明确的联系入口。
 
@@ -79,8 +79,6 @@
 ├── 案例库 Case Library
 │   ├── 案例总览 Overview
 │   ├── 精选案例 Featured Cases
-│   ├── 客户故事 Customer Stories
-│   ├── 可体验案例 Interactive Demos
 │   └── 案例详情页 Case Detail
 │
 ├── 资源中心 Resources
@@ -108,8 +106,8 @@
 - English: Explain Zeta’s six-layer enterprise agent operating capability system in a business-friendly yet forward-looking way, showing how it connects models, knowledge, systems, workflows, and people.
 
 ### 案例库 Case Library
-- 中文：以真实案例、客户故事和可体验版本证明则知的 Agent 不是概念，而是已经可以落地使用的能力体系。
-- English: Prove through real cases, customer stories, and interactive demos that Zeta’s agents are not just concepts, but a practical and deployable capability system.
+- 中文：以真实案例证明则知的 Agent 不是概念，而是已经可以落地使用的能力体系。
+- English: Prove through real cases that Zeta’s agents are not just concepts, but a practical and deployable capability system.
 
 ### 资源中心 Resources
 - 中文：持续输出则知对企业 AI Agent 落地的观点、动态和答疑，承接长期信任建设。
@@ -317,8 +315,7 @@
 
 - 证明则知的 Agent 已经有真实落地能力。
 - 帮助潜在客户快速找到与自己相近的场景。
-- 通过客户故事让案例更可信。
-- 通过可体验案例降低理解门槛。
+- 通过案例卡中的真实项目入口降低理解门槛。
 - 承接对案例感兴趣的用户，进一步联系则知。
 
 ## 案例库首页建议模块
@@ -335,27 +332,7 @@
 - 优先选“最能体现落地能力”的案例，而不是最酷炫的案例。
 - 尽量覆盖不同层级能力，例如：Agent 封装、集群协同、执行闭环、治理运营。
 
-### 3）客户故事 Customer Stories
-**内容方向**：
-- 从使用者视角讲案例。
-- 不是只讲功能，而是讲变化。
-
-**典型表达结构**：
-- 原来怎么做
-- 遇到了什么问题
-- 则知如何介入
-- 上线后有什么变化
-- 哪些工作真正被 Agent 承接
-
-### 4）可体验案例 Interactive Demos
-**内容方向**：
-- 给用户一个简单体验入口。
-- 不追求做全，而追求让用户感知价值。
-
-**建议说明语**：
-- 当前体验为简化版演示，正式项目可接入企业系统、知识与流程。
-
-### 5）案例详情页 Case Detail
+### 3）案例详情页 Case Detail
 每个案例详情页建议尽量按统一模板制作，便于后续扩展。
 
 **建议字段结构**：
@@ -458,8 +435,6 @@
 - `/`
 - `/capabilities`
 - `/case-library`
-- `/case-library/demo`
-- `/case-library/stories`
 - `/case-library/[slug]`
 - `/resources`
 - `/resources/articles`

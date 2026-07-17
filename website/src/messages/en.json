@@ -5,7 +5,7 @@
     "caseLibrary": "Case Library",
     "resources": "Resources",
     "about": "About Zeta ACI",
-    "tryDemo": "Try a Demo",
+    "tryDemo": "Explore Cases",
     "contact": "Contact Us"
   },
   "home": {
@@ -59,48 +59,9 @@
     "cases": {
       "label": "Featured Cases",
       "title": "Agent Capability Systems Already in Production",
-      "items": [
-        {
-          "title": "Intelligent Sales Follow-up",
-          "scene": "Sales Process Automation",
-          "result": "80% faster lead response, sales teams focus on high-value clients",
-          "layers": "Orchestration · Execution · Loop"
-        },
-        {
-          "title": "Enterprise Knowledge Hub Agent",
-          "scene": "Knowledge Management & Retrieval",
-          "result": "5x cross-department query efficiency, 95%+ accuracy",
-          "layers": "Encapsulation · Collaboration · Governance"
-        },
-        {
-          "title": "Multi-Agent Approval System",
-          "scene": "Process Approval & Risk Control",
-          "result": "60% shorter approval cycles, 98% anomaly interception rate",
-          "layers": "Orchestration · Governance · Operations"
-        }
-      ],
       "viewMore": "View All Cases",
-      "viewDetail": "Learn More"
-    },
-    "demo": {
-      "label": "Try a Demo",
-      "title": "Experience Agent Capabilities Firsthand",
-      "description": "These are simplified demos. Production projects integrate with enterprise systems, knowledge bases, and workflows",
-      "items": [
-        {
-          "name": "Knowledge Assistant Agent",
-          "desc": "Intelligent Q&A and retrieval based on enterprise knowledge bases"
-        },
-        {
-          "name": "Sales Follow-up Agent",
-          "desc": "Automatically follow up on leads and generate personalized outreach"
-        },
-        {
-          "name": "Data Analysis Agent",
-          "desc": "Query data in natural language and generate analytical reports"
-        }
-      ],
-      "tryNow": "Try Now"
+      "viewDetail": "Visit Project",
+      "miniProgramPending": "Mini Program entry pending"
     },
     "aboutSnapshot": {
       "label": "About Zeta",
@@ -216,78 +177,22 @@
     "hero": {
       "label": "Case Library",
       "title": "Proving Agent Value Through Real Deployment",
-      "subtitle": "See how Zeta brings agent capability systems to life through real cases, customer stories, and interactive demos"
+      "subtitle": "See how Zeta brings agent capability systems to life through real cases"
     },
     "featured": {
       "title": "Featured Cases",
-      "cases": [
-        {
-          "title": "Intelligent Sales Follow-up System",
-          "client": "A Leading Manufacturing Enterprise",
-          "scene": "Sales Process Automation",
-          "layer": "Orchestration · Execution · Loop",
-          "background": "The sales team was overwhelmed managing a high volume of leads with low manual follow-up efficiency.",
-          "problem": "Slow lead response, inconsistent follow-up standards, customer profiles scattered across multiple systems.",
-          "solution": "Deployed a multi-agent collaborative sales system: lead assignment agent for auto-distribution, follow-up agent for personalized outreach, data agent for unified customer profiles.",
-          "result": "80% faster lead response, sales teams can focus on high-value clients, 35% improvement in conversion rate."
-        },
-        {
-          "title": "Enterprise Knowledge Hub Agent",
-          "client": "A Major Financial Institution",
-          "scene": "Knowledge Management & Retrieval",
-          "layer": "Encapsulation · Collaboration · Governance",
-          "background": "Enterprise knowledge was scattered across documents, policies, emails, and multiple business systems.",
-          "problem": "Difficult cross-department knowledge retrieval, slow onboarding, knowledge base lagging behind policy updates.",
-          "solution": "Built a knowledge hub agent cluster: indexing agent for continuous updates, retrieval agent for multi-path recall, compliance agent for output accuracy.",
-          "result": "5x improvement in cross-department query efficiency, 95%+ accuracy, 40% reduction in new hire onboarding time."
-        },
-        {
-          "title": "Multi-Agent Approval System",
-          "client": "A Group Enterprise",
-          "scene": "Process Approval & Risk Control",
-          "layer": "Orchestration · Governance · Operations",
-          "background": "Complex group-level approval processes involving multi-department cross-review, compliance checks, and risk assessment.",
-          "problem": "Long approval cycles, human review oversight, siloed information across stages.",
-          "solution": "Built a multi-agent approval flow: decomposition agent for type identification, compliance agent for auto-verification, risk agent for anomaly flagging, flow agent for process driving.",
-          "result": "60% shorter approval cycles, 98% anomaly interception rate, full process traceability."
-        }
-      ]
+      "visitProject": "Visit Project",
+      "miniProgramPending": "Mini Program entry pending"
     },
-    "stories": {
-      "title": "Customer Stories",
-      "items": [
-        {
-          "title": "From Manual Dispatching to Agent Auto-Scheduling",
-          "quote": "We used to spend two hours daily on work order assignments. Now the agent handles distribution automatically — I only deal with exceptions.",
-          "role": "Operations Director",
-          "company": "A Logistics Technology Company"
-        },
-        {
-          "title": "Knowledge Queries: From Hours to Seconds",
-          "quote": "Looking up a policy used to mean searching through multiple systems. Now I just ask the agent and get an accurate answer with source citations.",
-          "role": "Compliance Lead",
-          "company": "A Financial Institution"
-        }
-      ]
-    },
-    "demos": {
-      "title": "Interactive Demos",
-      "description": "These are simplified demos. Production projects integrate with enterprise systems, knowledge bases, and workflows",
-      "items": [
-        {
-          "name": "Knowledge Assistant Agent",
-          "desc": "Intelligent Q&A and retrieval based on enterprise knowledge bases, with multi-turn dialogue and precise citations"
-        },
-        {
-          "name": "Sales Follow-up Agent",
-          "desc": "Input client information to auto-generate follow-up strategies and personalized outreach"
-        },
-        {
-          "name": "Data Analysis Agent",
-          "desc": "Describe your needs in natural language, auto-query data and generate visual reports"
-        }
-      ],
-      "tryNow": "Try Now"
+    "labels": {
+      "background": "Background",
+      "backgroundEnglish": "",
+      "problem": "Problem",
+      "problemEnglish": "",
+      "solution": "Solution",
+      "solutionEnglish": "",
+      "result": "Result",
+      "resultEnglish": ""
     }
   },
   "resources": {
@@ -331,6 +236,26 @@
           "title": "Zeta Enters Strategic Partnership with Leading Manufacturer",
           "date": "2025-02-20",
           "summary": "Both parties will collaborate deeply on intelligent sales, supply chain coordination, and more."
+        },
+        {
+          "title": "TradePilot Advances Its Foreign Trade AI Agent Business Hub",
+          "date": "2026-06-18",
+          "summary": "Product planning and page experience continue to evolve around campaign delivery, customer management, and business collaboration."
+        },
+        {
+          "title": "Ningxiang AI Interviewer Advances Digital Memory Product Planning",
+          "date": "2026-07-01",
+          "summary": "The mobile product plan continues to evolve around real-time interviews, memory capture, and history management."
+        },
+        {
+          "title": "Ningxiang AI Interviewer Begins MVP Architecture Optimization and Interview Device Exploration",
+          "date": "2026-06-12",
+          "summary": "Technical architecture and hardware product concepts are iterating together to expand interview formats."
+        },
+        {
+          "title": "Ouyang Cultural Street Smart Guide Mini Program Continues Iteration",
+          "date": "2026-04",
+          "summary": "The public experience continues to improve through cultural navigation, voice interaction, and content governance capabilities."
         }
       ]
     },
@@ -443,8 +368,6 @@
       "orchestration": "Orchestration & Execution",
       "governance": "Governance & Operations",
       "featuredCases": "Featured Cases",
-      "stories": "Customer Stories",
-      "demos": "Interactive Demos",
       "articles": "Articles & Insights",
       "news": "News & Updates",
       "faq": "FAQ",

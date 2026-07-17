@@ -73,7 +73,7 @@ export function Navbar() {
               <Globe size={16} />
               {locale === "zh" ? "EN" : "中文"}
             </button>
-            <Button href="/case-library/demo" variant="secondary" size="sm">
+            <Button href="/case-library" variant="secondary" size="sm">
               {t("tryDemo")}
             </Button>
             <Button href="/about/contact" size="sm">
@@ -120,7 +120,7 @@ export function Navbar() {
                   <Globe size={16} />
                   {locale === "zh" ? "EN" : "中文"}
                 </button>
-                <Button href="/case-library/demo" variant="secondary" size="sm">
+                <Button href="/case-library" variant="secondary" size="sm">
                   {t("tryDemo")}
                 </Button>
                 <Button href="/about/contact" size="sm">

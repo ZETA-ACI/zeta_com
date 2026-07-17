@@ -59,48 +59,9 @@
     "cases": {
       "label": "精选案例",
       "title": "已经落地的 Agent 能力体系",
-      "items": [
-        {
-          "title": "智能销售跟进系统",
-          "scene": "销售流程自动化",
-          "result": "线索响应速度提升 80%，销售人员可专注高价值客户",
-          "layers": "编排 · 执行 · 闭环"
-        },
-        {
-          "title": "企业知识中台 Agent",
-          "scene": "知识管理与检索",
-          "result": "跨部门知识查询效率提升 5 倍，准确率达到 95%+",
-          "layers": "封装 · 协同 · 治理"
-        },
-        {
-          "title": "多 Agent 协同审批系统",
-          "scene": "流程审批与风控",
-          "result": "审批周期缩短 60%，异常拦截率提升至 98%",
-          "layers": "编排 · 治理 · 运营"
-        }
-      ],
       "viewMore": "查看全部案例",
-      "viewDetail": "了解详情"
-    },
-    "demo": {
-      "label": "可体验 Agent",
-      "title": "亲自感受 Agent 的能力",
-      "description": "当前体验为简化版演示，正式项目可接入企业系统、知识与流程",
-      "items": [
-        {
-          "name": "知识助理 Agent",
-          "desc": "基于企业知识库的智能问答与检索"
-        },
-        {
-          "name": "销售跟进 Agent",
-          "desc": "自动跟进客户线索并生成跟进建议"
-        },
-        {
-          "name": "数据分析 Agent",
-          "desc": "用自然语言查询数据并生成分析报告"
-        }
-      ],
-      "tryNow": "立即体验"
+      "viewDetail": "访问项目",
+      "miniProgramPending": "小程序入口待补充"
     },
     "aboutSnapshot": {
       "label": "关于则知",
@@ -216,78 +177,22 @@
     "hero": {
       "label": "案例库",
       "title": "用真实落地证明 Agent 的价值",
-      "subtitle": "通过真实案例、客户故事和可体验版本，看则知如何将 Agent 能力体系落地到企业场景"
+      "subtitle": "通过真实案例，看则知如何将 Agent 能力体系落地到企业场景"
     },
     "featured": {
       "title": "精选案例",
-      "cases": [
-        {
-          "title": "智能销售跟进系统",
-          "client": "某头部制造企业",
-          "scene": "销售流程自动化",
-          "layer": "编排 · 执行 · 闭环",
-          "background": "销售团队面临大量客户线索管理压力，人工跟进效率低、易遗漏。",
-          "problem": "线索响应慢、跟进标准不统一、客户画像分散在多个系统中。",
-          "solution": "部署多 Agent 协同的销售跟进系统：线索分配 Agent 自动分派、跟进 Agent 生成个性化话术、数据 Agent 整合客户画像。",
-          "result": "线索响应速度提升 80%，销售人员可专注高价值客户，跟进转化率提升 35%。"
-        },
-        {
-          "title": "企业知识中台 Agent",
-          "client": "某大型金融机构",
-          "scene": "知识管理与检索",
-          "layer": "封装 · 协同 · 治理",
-          "background": "企业内部知识分散在文档、制度、邮件和多个业务系统中。",
-          "problem": "跨部门知识查询困难、新员工上手慢、制度更新后知识库滞后。",
-          "solution": "构建知识中台 Agent 集群：知识索引 Agent 持续更新、检索 Agent 多路召回、合规审核 Agent 确保输出准确。",
-          "result": "跨部门知识查询效率提升 5 倍，准确率达到 95%+，新员工上手周期缩短 40%。"
-        },
-        {
-          "title": "多 Agent 协同审批系统",
-          "client": "某集团企业",
-          "scene": "流程审批与风控",
-          "layer": "编排 · 治理 · 运营",
-          "background": "集团审批流程复杂，涉及多部门交叉审核、合规检查与风险评估。",
-          "problem": "审批周期长、人工审核易疏漏、各环节信息不互通。",
-          "solution": "搭建多 Agent 协同审批流：拆解 Agent 识别审批类型、合规 Agent 自动校验、风控 Agent 标记异常、流转 Agent 驱动流程推进。",
-          "result": "审批周期缩短 60%，异常拦截率提升至 98%，审批全流程可追溯。"
-        }
-      ]
+      "visitProject": "访问项目",
+      "miniProgramPending": "小程序入口待补充"
     },
-    "stories": {
-      "title": "客户故事",
-      "items": [
-        {
-          "title": "从人工派单到 Agent 自动调度",
-          "quote": "以前每天花两小时分配工单，现在 Agent 自动完成分配，我只需要处理异常情况。",
-          "role": "运营总监",
-          "company": "某物流科技公司"
-        },
-        {
-          "title": "知识查询从小时级到秒级",
-          "quote": "以前查一个制度要翻好几个系统，现在直接问 Agent 就能得到准确答案，还带出处引用。",
-          "role": "合规负责人",
-          "company": "某金融机构"
-        }
-      ]
-    },
-    "demos": {
-      "title": "可体验案例",
-      "description": "当前体验为简化版演示，正式项目可接入企业系统、知识与流程",
-      "items": [
-        {
-          "name": "知识助理 Agent",
-          "desc": "基于企业知识库的智能问答与检索，体验多轮对话与精准引用"
-        },
-        {
-          "name": "销售跟进 Agent",
-          "desc": "输入客户信息，自动生成跟进策略与个性化话术"
-        },
-        {
-          "name": "数据分析 Agent",
-          "desc": "用自然语言描述需求，自动查询数据并生成可视化报告"
-        }
-      ],
-      "tryNow": "立即体验"
+    "labels": {
+      "background": "背景",
+      "backgroundEnglish": "BACKGROUND",
+      "problem": "问题",
+      "problemEnglish": "PROBLEM",
+      "solution": "方案",
+      "solutionEnglish": "SOLUTION",
+      "result": "成果",
+      "resultEnglish": "RESULT"
     }
   },
   "resources": {
@@ -331,6 +236,26 @@
           "title": "则知与某头部制造企业达成战略合作",
           "date": "2025-02-20",
           "summary": "双方将在智能销售、供应链协同等领域展开深度合作。"
+        },
+        {
+          "title": "TradePilot 推进外贸 AI Agent 业务中枢建设",
+          "date": "2026-06-18",
+          "summary": "围绕投流、客户管理与业务协同等能力，持续完善产品方案与页面体验。"
+        },
+        {
+          "title": "凝想 AI 采访推进数字记忆产品规划",
+          "date": "2026-07-01",
+          "summary": "围绕实时采访、内容沉淀与历史管理，持续完善移动端产品方案。"
+        },
+        {
+          "title": "凝想 AI 采访启动 MVP 架构优化与采访机探索",
+          "date": "2026-06-12",
+          "summary": "技术架构与硬件产品概念同步迭代，拓展多形态采访场景。"
+        },
+        {
+          "title": "欧阳统战文化街区智慧导览小程序持续迭代",
+          "date": "2026-04",
+          "summary": "围绕文化导览、语音交互与内容治理等能力，持续优化公众使用体验。"
         }
       ]
     },
@@ -479,8 +404,6 @@
       "orchestration": "Agent 编排与执行",
       "governance": "治理与运营",
       "featuredCases": "精选案例",
-      "stories": "客户故事",
-      "demos": "可体验案例",
       "articles": "文章与观点",
       "news": "新闻动态",
       "faq": "常见问题",

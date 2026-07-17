@@ -6,10 +6,13 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ArrowRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { caseStudies } from "@/data/cases";
+import { useLocale } from "next-intl";
 
 export function CasesSection() {
   const t = useTranslations("home.cases");
+  const locale = useLocale() as "zh" | "en";
 
   return (
     <section className="py-24">
@@ -24,29 +27,50 @@ export function CasesSection() {
         </FadeIn>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {[0, 1, 2].map((i) => (
-            <FadeIn key={i} delay={i * 0.1}>
+          {caseStudies.map((caseStudy, i) => {
+            const content = caseStudy.content[locale];
+            return (
+            <FadeIn key={caseStudy.id} delay={i * 0.1}>
               <GlassCard className="h-full flex flex-col">
-                <span className="inline-block text-xs font-medium text-primary-500 bg-primary-50 rounded-full px-3 py-1 self-start mb-4">
-                  {t(`items.${i}.layers`)}
-                </span>
+                <div className="flex flex-wrap gap-2 self-start mb-4">
+                  {content.capabilities.map((capability) => (
+                    <span
+                      key={capability}
+                      className="rounded-full bg-primary-50 px-2.5 py-1 text-[11px] font-medium leading-none text-primary-500"
+                    >
+                      {capability}
+                    </span>
+                  ))}
+                </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">
-                  {t(`items.${i}.title`)}
+                  {content.title}
                 </h3>
                 <p className="text-sm text-text-tertiary mb-3">
-                  {t(`items.${i}.scene`)}
+                  {content.scene}
                 </p>
                 <p className="text-sm text-text-secondary flex-1 leading-relaxed">
-                  {t(`items.${i}.result`)}
+                  {content.summary}
                 </p>
                 <div className="mt-4 pt-4 border-t border-black/5">
-                  <button className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-500 hover:text-primary-600 transition-colors">
-                    {t("viewDetail")} <ArrowRight size={14} />
-                  </button>
+                  {caseStudy.href ? (
+                    <a
+                      href={caseStudy.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-500 hover:text-primary-600 transition-colors"
+                    >
+                      {t("viewDetail")} <ExternalLink size={14} />
+                    </a>
+                  ) : (
+                    <span className="text-sm text-text-tertiary">
+                      {t("miniProgramPending")}
+                    </span>
+                  )}
                 </div>
               </GlassCard>
             </FadeIn>
-          ))}
+            );
+          })}
         </div>
 
         <FadeIn delay={0.3}>

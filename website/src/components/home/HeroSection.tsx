@@ -53,7 +53,7 @@ export function HeroSection() {
 
           <FadeIn delay={0.3}>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button href="/case-library/demo" size="lg">
+              <Button href="/case-library" size="lg">
                 {t("cta1")}
               </Button>
               <Button href="/about/contact" variant="secondary" size="lg">

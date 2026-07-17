@@ -1,19 +1,19 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { ExternalLink, QrCode } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { ArrowRight, Quote } from "lucide-react";
+import { caseStudies } from "@/data/cases";
 
 export default function CaseLibraryPage() {
   const t = useTranslations("caseLibrary");
+  const locale = useLocale() as "zh" | "en";
 
   return (
     <>
-      {/* Hero */}
       <section className="py-24 gradient-soft">
         <Container>
           <FadeIn>
@@ -30,7 +30,6 @@ export default function CaseLibraryPage() {
         </Container>
       </section>
 
-      {/* Featured Cases */}
       <section className="py-24">
         <Container>
           <FadeIn>
@@ -40,130 +39,93 @@ export default function CaseLibraryPage() {
           </FadeIn>
 
           <div className="space-y-8">
-            {[0, 1, 2].map((i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <GlassCard hover={false} className="overflow-hidden">
-                  <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="lg:w-64 flex-shrink-0">
-                      <span className="inline-block text-xs font-medium text-primary-500 bg-primary-50 rounded-full px-3 py-1 mb-3">
-                        {t(`featured.cases.${i}.layer`)}
-                      </span>
-                      <h3 className="text-xl font-semibold text-text-primary mb-2">
-                        {t(`featured.cases.${i}.title`)}
-                      </h3>
-                      <p className="text-sm text-text-tertiary">
-                        {t(`featured.cases.${i}.client`)}
-                      </p>
-                      <p className="text-sm text-text-tertiary mt-1">
-                        {t(`featured.cases.${i}.scene`)}
-                      </p>
+            {caseStudies.map((caseStudy, i) => {
+              const content = caseStudy.content[locale];
+              return (
+                <FadeIn key={caseStudy.id} delay={i * 0.1}>
+                  <GlassCard hover={false} className="overflow-hidden">
+                    <div className="flex flex-col lg:flex-row gap-8">
+                      <div className="lg:w-64 flex-shrink-0">
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {content.capabilities.map((capability) => (
+                            <span
+                              key={capability}
+                              className="rounded-full bg-primary-50 px-2.5 py-1 text-[11px] font-medium leading-none text-primary-500"
+                            >
+                              {capability}
+                            </span>
+                          ))}
+                        </div>
+                        <h3 className="text-xl font-semibold text-text-primary mb-2">
+                          {content.title}
+                        </h3>
+                        <p className="text-sm text-text-tertiary">{content.industry}</p>
+                        <p className="text-sm text-text-tertiary mt-1">{content.scene}</p>
+                      </div>
+                      <div className="flex-1 space-y-4">
+                        <CaseDetail label={t("labels.background")} englishLabel={t("labels.backgroundEnglish")} content={content.background} />
+                        <CaseDetail label={t("labels.problem")} englishLabel={t("labels.problemEnglish")} content={content.problem} />
+                        <CaseDetail label={t("labels.solution")} englishLabel={t("labels.solutionEnglish")} content={content.solution} />
+                        <div className="rounded-xl bg-primary-50/60 p-4">
+                          <h4 className="text-xs font-medium text-primary-500 uppercase tracking-wider mb-1">
+                            {t("labels.result")}
+                            {t("labels.resultEnglish") && (
+                              <span className="ml-1.5 text-[10px] tracking-[0.12em] text-primary-400">
+                                {t("labels.resultEnglish")}
+                              </span>
+                            )}
+                          </h4>
+                          <p className="text-sm text-primary-600 font-medium">{content.result}</p>
+                        </div>
+                        {caseStudy.href ? (
+                          <a
+                            href={caseStudy.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full gradient-primary text-white px-5 py-2.5 text-sm font-medium"
+                          >
+                            {t("featured.visitProject")} <ExternalLink size={14} />
+                          </a>
+                        ) : (
+                          <div className="flex items-center gap-2 text-sm text-text-tertiary">
+                            <QrCode size={20} className="text-primary-400" />
+                            {t("featured.miniProgramPending")}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex-1 space-y-4">
-                      <div>
-                        <h4 className="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-1">
-                          背景 Background
-                        </h4>
-                        <p className="text-sm text-text-secondary leading-relaxed">
-                          {t(`featured.cases.${i}.background`)}
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-1">
-                          痛点 Problem
-                        </h4>
-                        <p className="text-sm text-text-secondary leading-relaxed">
-                          {t(`featured.cases.${i}.problem`)}
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-1">
-                          方案 Solution
-                        </h4>
-                        <p className="text-sm text-text-secondary leading-relaxed">
-                          {t(`featured.cases.${i}.solution`)}
-                        </p>
-                      </div>
-                      <div className="rounded-xl bg-primary-50/60 p-4">
-                        <h4 className="text-xs font-medium text-primary-500 uppercase tracking-wider mb-1">
-                          成果 Result
-                        </h4>
-                        <p className="text-sm text-primary-600 font-medium">
-                          {t(`featured.cases.${i}.result`)}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </GlassCard>
-              </FadeIn>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Customer Stories */}
-      <section className="py-24 gradient-soft">
-        <Container>
-          <FadeIn>
-            <h2 className="text-3xl font-bold text-text-primary mb-12">
-              {t("stories.title")}
-            </h2>
-          </FadeIn>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {[0, 1].map((i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <GlassCard className="h-full">
-                  <Quote size={24} className="text-primary-200 mb-4" />
-                  <h3 className="font-semibold text-text-primary mb-3">
-                    {t(`stories.items.${i}.title`)}
-                  </h3>
-                  <blockquote className="text-text-secondary leading-relaxed italic mb-4">
-                    &ldquo;{t(`stories.items.${i}.quote`)}&rdquo;
-                  </blockquote>
-                  <div className="text-sm text-text-tertiary">
-                    <span className="font-medium text-text-secondary">
-                      {t(`stories.items.${i}.role`)}
-                    </span>
-                    {" · "}
-                    {t(`stories.items.${i}.company`)}
-                  </div>
-                </GlassCard>
-              </FadeIn>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Interactive Demos Link */}
-      <section className="py-24">
-        <Container>
-          <FadeIn>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-text-primary mb-4">
-                {t("demos.title")}
-              </h2>
-              <p className="text-text-tertiary mb-8 max-w-xl mx-auto">
-                {t("demos.description")}
-              </p>
-              <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                {[0, 1, 2].map((i) => (
-                  <GlassCard key={i} className="text-center">
-                    <h3 className="font-semibold text-text-primary mb-2">
-                      {t(`demos.items.${i}.name`)}
-                    </h3>
-                    <p className="text-sm text-text-secondary mb-4 leading-relaxed">
-                      {t(`demos.items.${i}.desc`)}
-                    </p>
-                    <Button href="/case-library/demo" variant="secondary" size="sm">
-                      {t("demos.tryNow")}
-                    </Button>
                   </GlassCard>
-                ))}
-              </div>
-            </div>
-          </FadeIn>
+                </FadeIn>
+              );
+            })}
+          </div>
         </Container>
       </section>
+
     </>
+  );
+}
+
+function CaseDetail({
+  label,
+  englishLabel,
+  content,
+}: {
+  label: string;
+  englishLabel: string;
+  content: string;
+}) {
+  return (
+    <div>
+      <h4 className="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-1">
+        {label}
+        {englishLabel && (
+          <span className="ml-1.5 text-[10px] tracking-[0.12em] text-primary-400">
+            {englishLabel}
+          </span>
+        )}
+      </h4>
+      <p className="text-sm text-text-secondary leading-relaxed">{content}</p>
+    </div>
   );
 }

@@ -10,6 +10,13 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 export default function ResourcesPage() {
   const t = useTranslations("resources");
+  const latestNews = (t.raw("news.items") as Array<{
+    date: string;
+    title: string;
+    summary: string;
+  }>)
+    .toSorted((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 3);
 
   return (
     <>
@@ -85,18 +92,18 @@ export default function ResourcesPage() {
           </FadeIn>
 
           <div className="space-y-4">
-            {[0, 1].map((i) => (
+            {latestNews.map((item, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <GlassCard hover={false} className="flex flex-col sm:flex-row sm:items-center gap-4">
                   <span className="text-sm text-text-tertiary font-mono whitespace-nowrap">
-                    {t(`news.items.${i}.date`)}
+                    {item.date}
                   </span>
                   <div className="flex-1">
                     <h3 className="font-semibold text-text-primary mb-1">
-                      {t(`news.items.${i}.title`)}
+                      {item.title}
                     </h3>
                     <p className="text-sm text-text-secondary">
-                      {t(`news.items.${i}.summary`)}
+                      {item.summary}
                     </p>
                   </div>
                 </GlassCard>

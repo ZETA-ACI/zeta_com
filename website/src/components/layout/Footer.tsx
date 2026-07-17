@@ -20,8 +20,6 @@ export function Footer() {
       title: t("columns.cases"),
       links: [
         { label: t("links.featuredCases"), href: "/case-library" },
-        { label: t("links.stories"), href: "/case-library/stories" },
-        { label: t("links.demos"), href: "/case-library/demo" },
       ],
     },
     {
